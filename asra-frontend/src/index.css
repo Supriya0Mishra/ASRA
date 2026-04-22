@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-mesh: radial-gradient(at 0% 0%, hsla(210,100%,10%,1) 0, transparent 50%), 
+             radial-gradient(at 100% 0%, hsla(225,100%,15%,1) 0, transparent 50%), 
+             radial-gradient(at 100% 100%, hsla(250,100%,10%,1) 0, transparent 50%);
+}
+
+.dark body {
+  background-image: var(--bg-mesh);
+  background-attachment: fixed;
+}
